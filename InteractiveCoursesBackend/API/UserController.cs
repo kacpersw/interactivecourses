@@ -34,5 +34,22 @@ namespace InteractiveCoursesBackend.API
                 })
                 .FirstOrDefault();
         }
+
+        [HttpPost, Route("api/user/add")]
+        public void AddUser(UserDTO user)
+        {
+            dbContext
+                .Users
+                .Add(new Models.User
+                {
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Username = user.Username,
+                    Password = user.Password
+                });
+
+            dbContext.SaveChanges();
+        }
     }
 }

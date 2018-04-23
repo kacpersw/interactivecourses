@@ -152,6 +152,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\CourseController.cs" />
     <Compile Include="API\UserController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="DTO\CourseStageDTO.cs" />
     <Compile Include="DTO\ProgressDTO.cs" />
     <Compile Include="DTO\StageDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DTO\UserProfileDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
