@@ -50,3 +50,6 @@ C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\obj\
 C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\obj\Release\InteractiveCoursesWebApi.csproj.CoreCompileInputs.cache
 C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\obj\Release\InteractiveCoursesBackend.dll
 C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\obj\Release\InteractiveCoursesBackend.pdb
+C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\bin\System.Web.Cors.dll
+C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\bin\System.Web.Http.Cors.dll
+C:\Users\Kacper\Desktop\InteractiveCoursesBackend\InteractiveCoursesBackend\bin\System.Web.Http.Cors.xml
