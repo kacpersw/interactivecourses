@@ -51,5 +51,22 @@ namespace InteractiveCoursesBackend.API
 
             dbContext.SaveChanges();
         }
+        [HttpGet, Route("api/user")]
+        public UserProfileDTO Login(string username, string password)
+        {
+            return dbContext
+              .Users
+              .Where(u => u.Username == username && u.Password == password)
+              .Select(u => new UserProfileDTO
+              {
+                  Id = u.Id,
+                  Email = u.Email,
+                  FirstName = u.FirstName,
+                  LastName = u.LastName,
+                  Username = u.Username
+              })
+              .FirstOrDefault();
+
+        }
     }
 }
