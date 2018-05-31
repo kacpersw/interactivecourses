@@ -247,6 +247,7 @@
       <DependentUpon>ICModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\InteractiveCourses - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\InteractiveCourses - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>

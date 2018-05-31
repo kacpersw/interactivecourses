@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="ICContext-Web.config Connection String" description="ICContext Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.ICModel.csdl|res://*/Models.ICModel.ssdl|res://*/Models.ICModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:projectserverpz.database.windows.net,1433;initial catalog=InteractiveCourses;persist security info=True;user id=projectserver;password=Projekt123;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Kacper\\Desktop\\InteractiveCoursesBackend\\InteractiveCoursesBackend\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ICContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\stypu\\Desktop\\InteractiveCourses\\pzt\\interactivecourses\\InteractiveCoursesBackend\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ICContext']/@connectionString" />
   </parameter>
 </parameters>
