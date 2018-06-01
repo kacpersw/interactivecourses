@@ -20,10 +20,12 @@ namespace InteractiveCoursesBackend.Models
             this.Stages = new HashSet<Stage>();
             this.Categories = new HashSet<Category>();
             this.Users = new HashSet<User>();
+            this.Progresses = new HashSet<Progress>();
         }
     
         public long Id { get; set; }
         public string Name { get; set; }
+        public string Path { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stage> Stages { get; set; }
@@ -31,5 +33,7 @@ namespace InteractiveCoursesBackend.Models
         public virtual ICollection<Category> Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Progress> Progresses { get; set; }
     }
 }

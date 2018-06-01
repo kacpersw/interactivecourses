@@ -14,6 +14,12 @@ namespace InteractiveCoursesBackend.Models
     
     public partial class Stage
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Stage()
+        {
+            this.Progresses = new HashSet<Progress>();
+        }
+    
         public long Id { get; set; }
         public int Nr { get; set; }
         public string Name { get; set; }
@@ -21,5 +27,7 @@ namespace InteractiveCoursesBackend.Models
         public long CourseId { get; set; }
     
         public virtual Course Course { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Progress> Progresses { get; set; }
     }
 }

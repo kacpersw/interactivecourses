@@ -18,5 +18,10 @@ namespace InteractiveCoursesBackend.Models
         public long CategoryId { get; set; }
         public long CourseId { get; set; }
         public long StageId { get; set; }
+    
+        public virtual Category Category { get; set; }
+        public virtual Course Course { get; set; }
+        public virtual Stage Stage { get; set; }
+        public virtual User User { get; set; }
     }
 }

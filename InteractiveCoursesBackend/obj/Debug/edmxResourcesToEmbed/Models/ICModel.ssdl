@@ -14,6 +14,7 @@
     </Key>
     <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="CourseCategory">
     <Key>
@@ -104,6 +105,60 @@ warning 6002: The table/view 'InteractiveCourses.dbo.Progress' does not have a p
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Progress_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Progress" Type="Self.Progress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Progress">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Progress_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Progress" Type="Self.Progress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Progress">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Progress_Stage">
+    <End Role="Stage" Type="Self.Stage" Multiplicity="1" />
+    <End Role="Progress" Type="Self.Progress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Progress">
+        <PropertyRef Name="StageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Progress_User">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Progress" Type="Self.Progress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Progress">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Stage_Course">
     <End Role="Course" Type="Self.Course" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -169,6 +224,22 @@ warning 6002: The table/view 'InteractiveCourses.dbo.Progress' does not have a p
     <AssociationSet Name="FK_CourseCategory_Course" Association="Self.FK_CourseCategory_Course">
       <End Role="Course" EntitySet="Course" />
       <End Role="CourseCategory" EntitySet="CourseCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Progress_Category" Association="Self.FK_Progress_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Progress" EntitySet="Progress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Progress_Course" Association="Self.FK_Progress_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="Progress" EntitySet="Progress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Progress_Stage" Association="Self.FK_Progress_Stage">
+      <End Role="Stage" EntitySet="Stage" />
+      <End Role="Progress" EntitySet="Progress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Progress_User" Association="Self.FK_Progress_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Progress" EntitySet="Progress" />
     </AssociationSet>
     <AssociationSet Name="FK_Stage_Course" Association="Self.FK_Stage_Course">
       <End Role="Course" EntitySet="Course" />

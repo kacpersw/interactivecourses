@@ -18,6 +18,7 @@ namespace InteractiveCoursesBackend.Models
         public User()
         {
             this.Courses = new HashSet<Course>();
+            this.Progresses = new HashSet<Progress>();
         }
     
         public long Id { get; set; }
@@ -29,5 +30,7 @@ namespace InteractiveCoursesBackend.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Progress> Progresses { get; set; }
     }
 }

@@ -158,18 +158,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\CategoryController.cs" />
     <Compile Include="API\CourseController.cs" />
     <Compile Include="API\UserController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="DTO\AddCategoryDTO.cs" />
     <Compile Include="DTO\CategoryCourseDTO.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\CourseDTO.cs" />
     <Compile Include="DTO\CourseProgressDTO.cs" />
     <Compile Include="DTO\CourseStageDTO.cs" />
     <Compile Include="DTO\ProgressDTO.cs" />
+    <Compile Include="DTO\ShowCategoryDTO.cs" />
     <Compile Include="DTO\StageDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DTO\UserProfileDTO.cs" />

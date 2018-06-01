@@ -13,6 +13,7 @@
     <EntitySetMapping Name="Courses">
       <EntityTypeMapping TypeName="InteractiveCoursesModel.Course">
         <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="Path" ColumnName="Path" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>

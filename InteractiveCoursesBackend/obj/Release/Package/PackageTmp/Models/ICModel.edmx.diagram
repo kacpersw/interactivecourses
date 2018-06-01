@@ -14,6 +14,10 @@
         <AssociationConnector Association="InteractiveCoursesModel.FK_Stage_Course" ManuallyRouted="false" />
         <AssociationConnector Association="InteractiveCoursesModel.CourseCategory" ManuallyRouted="false" />
         <AssociationConnector Association="InteractiveCoursesModel.UserCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="InteractiveCoursesModel.FK_Progress_Category" />
+        <AssociationConnector Association="InteractiveCoursesModel.FK_Progress_Course" />
+        <AssociationConnector Association="InteractiveCoursesModel.FK_Progress_Stage" />
+        <AssociationConnector Association="InteractiveCoursesModel.FK_Progress_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
