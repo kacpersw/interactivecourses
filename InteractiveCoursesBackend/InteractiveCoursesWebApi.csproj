@@ -166,6 +166,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="DTO\AddCategoryDTO.cs" />
+    <Compile Include="DTO\AddCourseDTO.cs" />
+    <Compile Include="DTO\AddStageDTO.cs" />
     <Compile Include="DTO\CategoryCourseDTO.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\CourseDTO.cs" />

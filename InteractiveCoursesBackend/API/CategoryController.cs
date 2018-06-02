@@ -40,5 +40,22 @@ namespace InteractiveCoursesBackend.API
 
             return Request.CreateResponse(HttpStatusCode.OK);
         }
+
+        [HttpGet, Route("api/categories/{id}")]
+        public IEnumerable<CourseDTO> GetCoursesByCategory(long id) => dbContext.Categories
+            .SelectMany(c => c.Courses)
+            .Select(c=>new CourseDTO
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Stages = c.Stages.Select(s=>new StageDTO
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    Stage = s.Nr,
+                    HtmlContent = s.HtmlContent
+                })
+            })
+            .ToList();
     }
 }

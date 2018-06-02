@@ -10,6 +10,6 @@ namespace InteractiveCoursesBackend.DTO
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<CourseStageDTO> Stages { get; set; }
+        public IEnumerable<StageDTO> Stages { get; set; }
     }
 }

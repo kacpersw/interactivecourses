@@ -105,5 +105,43 @@ namespace InteractiveCoursesBackend.API
 
             return progresses;
         }
+
+        [HttpPost, Route("api/course/add")]
+        public HttpResponseMessage AddCategory(AddCourseDTO course)
+        {
+            var newCourse = new Course()
+            {
+                Name = course.Name,
+                Path = course.Path
+            };
+
+            dbContext.Courses.Add(newCourse);
+            dbContext.SaveChanges();
+
+            foreach (var id in course.CategoriesIds)
+            {
+                var category = dbContext.Categories.Where(c => c.Id == id).FirstOrDefault();
+
+                if (category != null)
+                    newCourse.Categories.Add(category);
+            }
+
+            dbContext.SaveChanges();
+
+            foreach (var stage in course.Stages)
+            {
+                newCourse.Stages.Add(new Stage
+                {
+                    CourseId = newCourse.Id,
+                    Name = stage.Name,
+                    HtmlContent = stage.HtmlContent,
+                    Nr = stage.Nr
+                });
+            }
+
+            dbContext.SaveChanges();
+
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
     }
 }
